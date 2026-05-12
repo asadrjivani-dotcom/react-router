@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f0f5;
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+/* ── App Title ── */
+body > div > h1 {
+  text-align: center;
+  padding: 28px 0 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: 0.01em;
+}
+
+/* ── Navbar ── */
+.app-nav {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5ef;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.app-nav__list {
+  list-style: none;
+  display: flex;
+  gap: 2px;
+}
+
+.app-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 14px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #666666;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, background 0.15s;
+}
+
+.app-nav__link:hover {
+  color: #1a1a2e;
+  background: #f7f7fb;
+}
+
+.app-nav__link.active {
+  color: #6c63ff;
+  border-bottom-color: #6c63ff;
+  font-weight: 500;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px 28px;
+}
+
+/* ── Row (Table Wrapper) ── */
+.row {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e5ef;
+  overflow: hidden;
+  overflow-x: auto;
+  margin-bottom: 32px;
+}
+
+/* ── Table ── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table thead tr {
+  background: #f7f7fb;
+}
+
+.table th {
+  padding: 11px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  color: #888888;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e5ef;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid #f0f0f7;
+  color: #333333;
+  vertical-align: middle;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: #fafafd;
+}
+
+/* ── View Button ── */
+td .app-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  background: #eeeeff;
+  color: #6c63ff;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #ddddf8;
+  border-bottom: 1px solid #ddddf8;
+  transition: background 0.15s;
+}
+
+td .app-nav__link:hover {
+  background: #e0e0ff;
+  color: #6c63ff;
+}
+
+/* ── Page (Home & UserDetail) ── */
+.page {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e5ef;
+  padding: 32px;
+  max-width: 600px;
+}
+
+.page h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.page > p:first-of-type {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin-bottom: 24px;
+}
+
+.page p {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid #f0f0f7;
+  font-size: 14px;
+  color: #1a1a2e;
+  line-height: 1.5;
+}
+
+.page p:last-child {
+  border-bottom: none;
+}
+
+/* ── 404 Page ── */
+.four-oh-four {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+  padding: 60px 24px;
+}
+
+.four-oh-four__glow,
+.four-oh-four__grid {
+  display: none;
+}
+
+.four-oh-four__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.four-oh-four__eyebrow {
+  font-size: 11px;
+  color: #bbbbbb;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.four-oh-four__code {
+  font-size: 80px;
+  font-weight: 800;
+  color: #6c63ff;
+  line-height: 1;
+}
+
+.four-oh-four__lead {
+  font-size: 15px;
+  color: #666666;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.four-oh-four__hint {
+  font-size: 13px;
+  color: #bbbbbb;
+  max-width: 340px;
+  line-height: 1.5;
+}
+
+.four-oh-four__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: #6c63ff;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.four-oh-four__btn:hover {
+  background: #5a52e0;
+}
+
+.four-oh-four__btn-icon {
+  font-size: 16px;
+}
